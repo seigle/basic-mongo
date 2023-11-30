@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Getting Started: Serving Web Content</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	</head>
+
+	<body>
+		<h2>Rock Paper Scissors</h2>
+		
+		<div>
+			<p>Select <a href="rock_paper_scissors?personChoice=Rock">Rock</a></p>
+			<p>Select <a href="rock_paper_scissors?personChoice=Paper">Paper</a></p>
+			<p>Select <a href="rock_paper_scissors?personChoice=Scissors">Scissors</a></p>
+		</div>
+		
+		<p th:text="|The person chose: ${personChoice}|" />
+		<p th:text="|The computer chose: ${computerChoice}|" />
+		<p th:text="|The winner is: ${winner}|" />
+		<p th:text="|The time is: ${timestamp}|" />
+
+	</body>
+</html>

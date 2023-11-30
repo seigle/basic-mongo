@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Getting Started: Serving Web Content</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	</head>
+
+	<body>
+		<table border="1">
+		    <thead>
+		        <tr>
+		            <th width="60"> Name </th>
+		            <th width="30"> Size </th>
+		            <th width="30"> Empty </th>
+		        </tr>
+		    </thead>
+		    <tbody>
+				<tr th:if="${collections.empty}">
+		        	<td colspan="2"> No Collections Available </td>
+		    	</tr>
+		    	<tr th:each="table : ${collections}">
+		            <td width="60" align="center"><span th:text="${table.name}"> Name </span></td>
+		            <td width="30" align="center"><span th:text="${table.sizeOnDisk}"> Size </span></td>
+		            <td width="30" align="center"><span th:text="${table.empty}"> Empty </span></td>
+		        </tr>
+		    </tbody>
+		</table>
+	</body>
+</html>
